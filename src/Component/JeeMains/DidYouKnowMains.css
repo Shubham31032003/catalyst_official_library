@@ -1,0 +1,163 @@
+.exam-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 15px;
+    perspective: 1000px;
+    font-family: 'Kotta One', serif;
+  }
+  
+  .fact-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .fact-card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .fact-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .fact-card-front, .fact-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .fact-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fact-header {
+    color: white;
+    padding: 0.5rem;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .header-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .fact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 1rem;
+  }
+  
+  .fact-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+  
+  .fact-text {
+    margin: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .fact-footer {
+    font-style: italic;
+    color: #6c757d;
+  }
+  
+  .fact-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .nav-button {
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+  }
+  
+  .fact-counter {
+    font-weight: bold;
+  }
+  .jee-mains .fact-card-front {
+    border: 2px solid #aacdf3;
+  }
+  
+  .jee-mains .fact-header,
+  .jee-mains .fact-card-back,
+  .jee-mains .nav-button {
+    background-color: #6eaced;
+  }
+  
+  .jee-mains .fact-icon,
+  .jee-mains .fact-counter {
+    color: #007bff;
+  }
+  
+  .jee-mains .nav-button:hover {
+    background-color: #0056b3;
+  } 
+  @media (max-width: 768px) {
+    .exam-container {
+      margin: 1rem auto;
+    }
+  
+    .fact-card {
+      height: 350px;
+    }
+  
+    .fact-navigation {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+    }
+  
+    .nav-button {
+      width: 100%;
+    }
+  
+    .fact-counter {
+      order: -1;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .fact-card {
+      height: 400px;
+    }
+  
+    .fact-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .fact-icon {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  } 
